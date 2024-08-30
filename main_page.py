@@ -4,30 +4,39 @@ import stTools as tools
 import default_page
 import portfolio_page
 import model_page
+import login_page
 
-st.set_page_config(
-    page_title="FinRisk",
-    page_icon="🦈",
-    layout="wide"
-)
+def main():
+    
 
-tools.remove_white_space()
+    tools.remove_white_space()
 
-st.title("Investment Risk Management Simulation")
+    # Check if user is logged in
+    if 'is_authenticated' not in st.session_state:
+        st.session_state.is_authenticated = False
 
-comp.load_sidebar()
+    if st.session_state.is_authenticated:
+        st.title("Risk-O-Meter: Your Investment Safety Net")
 
-if "load_portfolio_check" not in st.session_state:
-    st.session_state["load_portfolio_check"] = False
+        comp.load_sidebar()
 
-if "run_simulation_check" not in st.session_state:
-    st.session_state["run_simulation_check"] = False
+        if "load_portfolio_check" not in st.session_state:
+            st.session_state["load_portfolio_check"] = False
 
-if not st.session_state.load_portfolio_check:
-    default_page.load_page()
+        if "run_simulation_check" not in st.session_state:
+            st.session_state["run_simulation_check"] = False
 
-elif not st.session_state.run_simulation_check and st.session_state.load_portfolio_check:
-    portfolio_page.load_page()
+        if not st.session_state.load_portfolio_check:
+            default_page.load_page()
 
-elif st.session_state.run_simulation_check:
-    model_page.load_page()
+        elif not st.session_state.run_simulation_check and st.session_state.load_portfolio_check:
+            portfolio_page.load_page()
+
+        elif st.session_state.run_simulation_check:
+            model_page.load_page()
+
+    else:
+        login_page.load_login_page()
+
+if __name__ == "__main__":
+    main()

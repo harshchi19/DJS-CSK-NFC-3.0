@@ -5,19 +5,35 @@ import stTools as tools
 def load_page():
     st.markdown(
         """
-            Welcome to :green[FinRisk]! Explore this app to assess and simulate 
-            your investment portfolio's risk effortlessly! :green[Risk management] is like 
-            :blue[wearing a helmet while riding a bike]—it shields your money during investments. 
-            It's a strategy set to understand uncertainties in stocks or bonds.
-
-            Imagine your investment journey as a game; knowing rules and setbacks gives you a competitive edge. 
-            :green[Value at Risk (VaR)] and :green[Conditional Value at Risk (CVaR)] aid in smart risk navigation, 
-            keeping your game plan robust. Don't worry, I'll explain these concepts in a bit.
-            
-            Build your :green[portfolio] on the sidebar; guidance is provided! Contact me at 
-            [DelinM](https://www.linkedin.com/in/raymond-mu/)
+           Welcome to Risk-O-Meter! Are you ready to take the guesswork out of your investments? Our app uses advanced risk management tools like Value at Risk (VaR) and Conditional Value at Risk (CVaR) to help you understand and minimize potential losses. Think of it as a safety net for your financial journey
             """
     )
+
+    st.markdown("""
+    <style>
+            html{
+                font-family: Manrope;
+                }
+            .e1nzilvr2{
+                text-align:center;
+                text-shadow: 0px 2px 5.3px rgba(0, 0, 0, 0.19);
+                font-family: Manrope;
+                font-size: 72px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 83px; 
+                letter-spacing: -2.16px;
+                opacity: 0;
+                animation: fadeIn 2s forwards;
+                }
+             .ea3mdgi5{
+                max-width:100%;
+                }
+
+            [data-testid="stMetric"]{
+                background-color: #FFF !important;}
+    </style>
+        """, unsafe_allow_html=True)
 
     st.subheader(f"Market Preview")
 
