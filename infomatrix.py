@@ -28,7 +28,8 @@ discord_base64 = image_to_base64("images\\discord.png")
 
 
 # Set page config
-st.set_page_config(page_title="TSEC", layout="wide")
+st.set_page_config(page_title="InfoFinance",page_icon = "images\\icon.jpg", layout="wide")
+
 
 st.sidebar.title("InfoFinance")
 page = st.sidebar.radio("Checkout", ["Home", "AI Assistant", "Portfolio", "AI Finance Management","Market Simulation","Stock Price Prediction","Expense Retrieval","Dupont Analysis","Algorithm Strategies","Business Intelligence Tool"])
