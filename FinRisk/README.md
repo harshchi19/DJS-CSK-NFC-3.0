@@ -32,8 +32,7 @@ of simulations, historical data of your selected stocks, the confidence levels (
 will also generate a line chart for your portfolio's daily returns. All data can be downloaded as a CSV file for
 further analysis.
 ![portfolio_risk_simulator](./readmefile/risk_model.png)
-## How to Use
-👉 click [FinRisk](https://finrisk.streamlit.app/) to launch the app!
+
 =======
 # DJS-CSK-NFC-3.0
 >>>>>>> 10a8b44f0099ffda4643d0cf914868e60607ee83
