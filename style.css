@@ -36,13 +36,13 @@ html::-webkit-scrollbar {
 
 /* Style for radio buttons in the sidebar */
 [data-testid="stSidebar"] .stRadio > label {
-    font-size: 16px !important;
+    font-size: 26px !important;
     font-weight: 600 !important;
 }
 
 [data-testid="stSidebar"] .stRadio > div {
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 25px !important;
+    font-weight: 900 !important;
 }
 
 [data-testid="stSidebar"] .stRadio [role="radiogroup"] label {

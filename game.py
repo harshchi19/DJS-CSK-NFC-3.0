@@ -5,6 +5,49 @@ import plotly.graph_objects as go
 from datetime import datetime, timedelta
 
 def game():
+
+    def set_background(image_url):
+        st.markdown(
+            f"""
+            <style>
+            .stApp {{
+                background-image: url({image_url});
+                background-size: cover;
+                background-position: top;
+                background-repeat:repeat;
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+    
+    set_background("https://t4.ftcdn.net/jpg/02/04/62/55/360_F_204625568_DstbVm1f5H2vw3RsqUf78tTEf8mavgBz.jpg")
+    
+    st.markdown("""
+    <style>
+            html{
+                font-family: Manrope;
+                }
+            .e1nzilvr2{
+                text-align:center;
+                text-shadow: 0px 2px 5.3px rgba(0, 0, 0, 0.19);
+                font-family: Manrope;
+                font-size: 92px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 83px; 
+                letter-spacing: -2.16px;
+                opacity: 0;
+                animation: fadeIn 2s forwards;
+                }
+             .ea3mdgi5{
+                max-width:100%;
+                }
+            
+            
+    </style>
+        """, unsafe_allow_html=True)
+    
     # Initialize session state variables
     if 'portfolio' not in st.session_state:
         st.session_state.portfolio = {}

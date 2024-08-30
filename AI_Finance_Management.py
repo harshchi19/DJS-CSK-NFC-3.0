@@ -93,8 +93,8 @@ def AIFM():
         5. Financial Health Overview: Summarize key financial ratios or metrics (e.g., debt-to-income ratio, savings rate) and their implications.
 
         Give all information in a wide, and precise table. Give a roadmap to achieve the saving goals and to repay debt which should be achieveable and break into months in tabular format. Provide brief explanations or recommendations where necessary to contextualize the data.
-        
-        """
+        NOTE : All the information must be in form of tables (no paragraphs, no pointers)
+        """ 
 
         if custom_prompt:
             prompt_parts += f"\nAdditional Information: {custom_prompt}"

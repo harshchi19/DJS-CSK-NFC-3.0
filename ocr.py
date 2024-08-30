@@ -4,10 +4,51 @@ from datetime import date, datetime
 import plotly.express as px
 
 def ocr():
+    def set_background(image_url):
+        st.markdown(
+            f"""
+            <style>
+            .stApp {{
+                background-image: url({image_url});
+                background-size: cover;
+                background-position: top;
+                background-repeat:repeat;
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+    
+    set_background("https://media.licdn.com/dms/image/v2/D4E05AQHmmi0tgsOVCQ/videocover-low/videocover-low/0/1722965758350?e=2147483647&v=beta&t=AwqRnGY9LluYGGsiSk-3p31JWHChnRmUgOhnKYjFZeU")
+    
+    st.markdown("""
+    <style>
+            html{
+                font-family: Manrope;
+                }
+            .e1nzilvr2{
+                text-align:center;
+                text-shadow: 0px 2px 5.3px rgba(0, 0, 0, 0.19);
+                font-family: Manrope;
+                font-size: 102;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%; 
+                letter-spacing: -2.16px;
+                opacity: 0;
+                animation: fadeIn 2s forwards;
+                }
+             .ea3mdgi5{
+                max-width:100%;
+                }
+            
+            
+    </style>
+        """, unsafe_allow_html=True)
     
 
-    st.title('Visualize Your HDFC Bank Statement')
-    st.write('Export your HDFC Bank statement as a XLS file and drop it here to analyze your expenses')
+    st.title('Expense Categorization and Visualization')
+    st.write('Export your Bank statement as a XLS file and drop it here to analyze your expenses')
     st.markdown("*Note: We don't store your data*")
 
     sample_statements = ["https://tinyurl.com/ynekxfmp",

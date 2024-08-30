@@ -5,33 +5,6 @@ import portfolio_page_components
 
 def load_page():
 
-    st.markdown("""
-    <style>
-            html{
-                font-family: Manrope;
-                }
-            .e1nzilvr2{
-                text-align:center;
-                text-shadow: 0px 2px 5.3px rgba(0, 0, 0, 0.19);
-                font-family: Manrope;
-                font-size: 72px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 83px; 
-                letter-spacing: -2.16px;
-                opacity: 0;
-                animation: fadeIn 2s forwards;
-                }
-             .ea3mdgi5{
-                max-width:100%;
-                }
-
-            [data-testid="stMetric"]{
-                background-color: #FFF !important;}
-    </style>
-        """, unsafe_allow_html=True)
-                
-
     no_stocks = st.session_state.no_investment
 
     # load portfolio performance

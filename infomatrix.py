@@ -6,6 +6,9 @@ from ai_assistant import ai_assistant
 from game import game
 from stock_price_prediction import stock
 from ocr import ocr
+from dupont import dupont
+from Algo_Strategy import algo_strag
+from BI import bi
 
 def image_to_base64(image_path):
     with open(image_path, "rb") as image_file:
@@ -25,10 +28,10 @@ discord_base64 = image_to_base64("images\\discord.png")
 
 
 # Set page config
-st.set_page_config(page_title="Bank of Baroda - Future of Auditing", layout="wide")
+st.set_page_config(page_title="TSEC", layout="wide")
 
-st.sidebar.title("DJS InfoFinance")
-page = st.sidebar.radio("Checkout", ["Home", "AI Assistant", "Portfolio", "AI Finance Management","Market Simulation","Stock Price Prediction","Expense Retrieval"])
+st.sidebar.title("InfoFinance")
+page = st.sidebar.radio("Checkout", ["Home", "AI Assistant", "Portfolio", "AI Finance Management","Market Simulation","Stock Price Prediction","Expense Retrieval","Dupont Analysis","Algorithm Strategies","Business Intelligence Tool"])
 
 def load_css(file_name):
         with open(file_name) as f:
@@ -413,6 +416,12 @@ if page == "Home":
     .cssbuttons-io-button:active .icon {
       transform: scale(0.95);
     }
+    
+    h3{
+                font-size: 18px;
+                text-align: center;
+                }
+
     </style>
     """, unsafe_allow_html=True)
 
@@ -423,29 +432,11 @@ if page == "Home":
         st.markdown(f"""
         <div class="card">
           <div class="content">
-            <p class="heading">NLP for Regulation Interpretation</p>
+            <p class="heading">Personal Finance Dashboard</p>
             <div class="card__img">
               <img src="data:image/png;base64,{aichatbot_base64}" />
             </div>
-            <button class="cssbuttons-io-button">
-            Get started
-            <div class="icon">
-                <a href="https://ml-studio.streamlit.app/">
-                <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    fill="currentColor"
-                ></path>
-                </svg>
-            </div>
-            </a>
-            </button>
+            <h3> Know about all your investments at one place</h3>
           </div>
         </div>
         
@@ -455,30 +446,11 @@ if page == "Home":
         st.markdown(f"""
         <div class="card">
           <div class="content">
-            <p class="heading">Audit Report Generation</p>
+            <p class="heading">AI Finance Management</p>
             <div class="card__img">
               <img src="data:image/png;base64,{reportgen_base64}" />
             </div>
-            <button class="cssbuttons-io-button">
-            Get started
-            <div class="icon">
-                <a href="https://auditorreportui.streamlit.app/">
-                <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    fill="currentColor"
-                ></path>
-                </svg>
-            </div>
-            </a>
-            </button>
-            
+             <h3>Take wisely decision using our AI trained models</h3>
           </div>
         </div>
         """, unsafe_allow_html=True)
@@ -487,27 +459,11 @@ if page == "Home":
         st.markdown(f"""
         <div class="card">
           <div class="content">
-            <p class="heading">Predictive Risk Analysis</p>
+            <p class="heading">Stock Price Prediction</p>
             <div class="card__img">
               <img src="data:image/png;base64,{analysis_base64}" />
             </div>
-            <button class="cssbuttons-io-button">
-            Get started
-            <div class="icon">
-                <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    fill="currentColor"
-                ></path>
-                </svg>
-            </div>
-            </button>
+            <h3>Get future predictions of Stocks</h3>
           </div>
         </div>
         """, unsafe_allow_html=True)
@@ -516,27 +472,11 @@ if page == "Home":
         st.markdown(f"""
         <div class="card">
           <div class="content">
-            <p class="heading">Dynamic Compliance Monitoring</p>
+            <p class="heading">Expense Retrieval</p>
             <div class="card__img">
               <img src="data:image/png;base64,{compliance_base64}" />
             </div>
-            <button class="cssbuttons-io-button">
-            Get started
-            <div class="icon">
-                <svg
-                height="24"
-                width="24"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                >
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                    fill="currentColor"
-                ></path>
-                </svg>
-            </div>
-            </button>
+            <h3> Categorize your bills and expenses seamlessly</h3>
           </div>
         </div>
         """, unsafe_allow_html=True)
@@ -715,3 +655,9 @@ elif page == 'Stock Price Prediction':
     stock()
 elif page == "Expense Retrieval":
     ocr()
+elif page == "Dupont Analysis":
+    dupont()
+elif page == "Algorithm Strategies":
+    algo_strag()
+elif page == "Business Intelligence Tool":
+    bi()

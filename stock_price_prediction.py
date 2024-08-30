@@ -16,6 +16,49 @@ from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.metrics import r2_score, mean_absolute_error
 
 def stock():
+
+    def set_background(image_url):
+        st.markdown(
+            f"""
+            <style>
+            .stApp {{
+                background-image: url({image_url});
+                background-size: cover;
+                background-position: top;
+                background-repeat:repeat;
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+    
+    set_background("https://img.freepik.com/free-vector/paper-style-white-monochrome-background_52683-66443.jpg")
+    
+    st.markdown("""
+    <style>
+            html{
+                font-family: Manrope;
+                }
+            .e1nzilvr2{
+                text-align:center;
+                text-shadow: 0px 2px 5.3px rgba(0, 0, 0, 0.19);
+                font-family: Manrope;
+                font-size: 102;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%; 
+                letter-spacing: -2.16px;
+                opacity: 0;
+                animation: fadeIn 2s forwards;
+                }
+             .ea3mdgi5{
+                max-width:100%;
+                }
+            
+            
+    </style>
+        """, unsafe_allow_html=True)
+    
     st.title('Stock Price Predictions')
     st.sidebar.info('Welcome to the Stock Price Prediction App. Choose your options below')
 
